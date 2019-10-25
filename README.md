@@ -1,5 +1,5 @@
 # w-restapi
-A A REST API server with swagger.
+A REST API server with swagger.
 
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
 [![npm version](http://img.shields.io/npm/v/w-restapi.svg?style=flat)](https://npmjs.org/package/w-restapi) 
