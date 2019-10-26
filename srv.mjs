@@ -2,23 +2,6 @@ import WRestapi from './src/WRestapi.mjs'
 
 let routes = [
     {
-        table: 'pet',
-        props: {
-            'id': {
-                'type': 'string',
-                'description': 'id description',
-            },
-            'petName': {
-                'type': 'string',
-                'description': 'petName description',
-            },
-            'petAge': {
-                'type': 'string',
-                'description': 'petAge description',
-            }
-        },
-    },
-    {
         table: 'store',
         props: {
             'id': {
@@ -32,6 +15,23 @@ let routes = [
             'price': {
                 'type': 'number',
                 'description': 'price description',
+            }
+        },
+    },
+    {
+        table: 'pet',
+        props: {
+            'id': {
+                'type': 'string',
+                'description': 'id description',
+            },
+            'petName': {
+                'type': 'string',
+                'description': 'petName description',
+            },
+            'petAge': {
+                'type': 'string',
+                'description': 'petAge description',
             }
         },
     },

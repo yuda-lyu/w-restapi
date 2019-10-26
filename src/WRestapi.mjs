@@ -1,6 +1,7 @@
 import fs from 'fs'
 import Hapi from '@hapi/hapi'
 import Inert from '@hapi/inert' //提供靜態檔案
+import sortBy from 'lodash/sortBy'
 import isfun from 'wsemi/src/isfun.mjs'
 import routesToSwagger from './routesToSwagger.mjs'
 import routesToAPI from './routesToAPI.mjs'
@@ -52,13 +53,16 @@ function WRestapi(opt) {
     let apis = []
     apis.push(apiFile)
 
+    //sortBy
+    opt.routes = sortBy(opt.routes, 'table')
+
     //routesToAPI
     apis = routesToAPI(apis, opt.routes, opt.apiParent, opt.proc)
 
     //routesToSwagger
     let sw = routesToSwagger(`localhost:${opt.port}`, opt.apiParent, opt.routes)
     fs.writeFileSync(`./${opt.docFolder}/swagger.json`, JSON.stringify(sw, null, 4), 'utf8')
-    console.log(sw)
+    //console.log(sw)
 
     async function runRestfulServer() {
 
