@@ -26,23 +26,6 @@ import WRestapi from 'w-restapi'
 
 let routes = [
     {
-        table: 'pet',
-        props: {
-            'id': {
-                'type': 'string',
-                'description': 'id description',
-            },
-            'petname': {
-                'type': 'string',
-                'description': 'petname description',
-            },
-            'belognname': {
-                'type': 'string',
-                'description': 'belognname description',
-            }
-        },
-    },
-    {
         table: 'store',
         props: {
             'id': {
@@ -56,6 +39,23 @@ let routes = [
             'price': {
                 'type': 'number',
                 'description': 'price description',
+            }
+        },
+    },
+    {
+        table: 'pet',
+        props: {
+            'id': {
+                'type': 'string',
+                'description': 'id description',
+            },
+            'petname': {
+                'type': 'string',
+                'description': 'petname description',
+            },
+            'belognname': {
+                'type': 'string',
+                'description': 'belognname description',
             }
         },
     },

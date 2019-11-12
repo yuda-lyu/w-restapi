@@ -1,6 +1,6 @@
 {
   "name": "w-restapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A REST API server with swagger.",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {

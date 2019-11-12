@@ -64,7 +64,7 @@ function WRestapi(opt) {
     fs.writeFileSync(`./${opt.docFolder}/swagger.json`, JSON.stringify(sw, null, 4), 'utf8')
     //console.log(sw)
 
-    async function runRestfulServer() {
+    async function startServer() {
 
         //server
         let server = Hapi.server({
@@ -93,7 +93,7 @@ function WRestapi(opt) {
         opt.serverHapi.route(apis)
     }
     else {
-        runRestfulServer()
+        startServer()
     }
 
 }
