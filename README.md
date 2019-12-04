@@ -26,7 +26,7 @@ import WRestapi from 'w-restapi'
 
 let routes = [
     {
-        table: 'store',
+        apiName: 'store',
         props: {
             'id': {
                 'type': 'string',
@@ -43,7 +43,7 @@ let routes = [
         },
     },
     {
-        table: 'pet',
+        apiName: 'pet',
         props: {
             'id': {
                 'type': 'string',
@@ -61,12 +61,12 @@ let routes = [
     },
 ]
 
-function proc({ method, table, propName, propValue, payload, pm, req, res }) {
+function proc({ method, apiName, propName, propValue, payload, pm, req, res }) {
     //可由req內資訊做身份驗證
 
     //resolve
-    pm.resolve(JSON.stringify({ method, table, propName, propValue, payload }))
-    console.log(method, table, propName, propValue, payload)
+    pm.resolve(JSON.stringify({ method, apiName, propName, propValue, payload }))
+    console.log(method, apiName, propName, propValue, payload)
 
 }
 

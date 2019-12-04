@@ -54,7 +54,7 @@ function WRestapi(opt) {
     apis.push(apiFile)
 
     //sortBy
-    opt.routes = sortBy(opt.routes, 'table')
+    opt.routes = sortBy(opt.routes, 'apiName')
 
     //routesToAPI
     apis = routesToAPI(apis, opt.routes, opt.apiParent, opt.proc)

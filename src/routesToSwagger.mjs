@@ -241,7 +241,7 @@ function addPath(tag, props) {
 
 function genPathsFromRoutes(routes) {
     let c = map(routes, (v) => {
-        let tag = v.table
+        let tag = v.apiName
         let props = v.props
         return addPath(tag, props)
     })
@@ -264,7 +264,7 @@ function genSWJson(host, basePath, routes) {
  *
  * @param {String} [host='localhost:8080'] 輸入伺服器所在host字串，預設'localhost:8080'
  * @param {String} [apiParent='api'] 輸入api上層路徑字串，預設'api'
- * @param {Array} [routes=[]] 輸入Routes陣列，每個物件皆需要有表名字串'table'、主鍵名字串'pk'、物件所屬欄位物件'props'，預設[]
+ * @param {Array} [routes=[]] 輸入Routes陣列，每個物件皆需要有表名字串'apiName'、主鍵名字串'pk'、物件所屬欄位物件'props'，預設[]
  * @returns {Object} 回傳Swagger的設定物件
  */
 function routesToSwagger(host = 'localhost:8080', apiParent = 'api', routes = []) {

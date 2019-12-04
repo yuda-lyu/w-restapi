@@ -7,9 +7,9 @@ import isstr from 'wsemi/src/isstr.mjs'
  * 由Routes陣列資料轉hapi的API資料陣列
  *
  * @param {Array} [apis=[]] 輸入既有hapi的apis資料陣列，routes處理完會再新增至apis內，預設[]
- * @param {Array} [routes=[]] 輸入需自動產製的routes資料陣列，每個元素需有'table'欄位，其值給予表名字串，'props'欄位，其值給予欄位物件，預設[]
+ * @param {Array} [routes=[]] 輸入需自動產製的routes資料陣列，每個元素需有'apiName'欄位，其值給予表名字串，'props'欄位，其值給予欄位物件，預設[]
  * @param {String} [apiParent='api'] 輸入api上層路徑字串，預設'api'
- * @param {Function} [proc=() => {}] 輸入各api處理函數，prop會傳入method(API method),table(表名),propName(指定欄位名稱),propValue(指定欄位值),payload(post時數據),req(hapi的req),res(hapi的res),pm(回傳用Promise)，處理完畢後成功時呼叫pm.resolve回傳，失敗時呼叫pm.reject回傳，預設()=>{}
+ * @param {Function} [proc=() => {}] 輸入各api處理函數，prop會傳入method(API method),apiName(表名),propName(指定欄位名稱),propValue(指定欄位值),payload(post時數據),req(hapi的req),res(hapi的res),pm(回傳用Promise)，處理完畢後成功時呼叫pm.resolve回傳，失敗時呼叫pm.reject回傳，預設()=>{}
  * @returns {Array} 回傳hapi的API資料陣列
  */
 function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
@@ -26,14 +26,14 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
         //GET all
         r = {
-            path: basePath + v.table,
+            path: basePath + v.apiName,
             method: 'GET',
             handler: function (req, res) {
                 let pm = genPm()
 
                 proc({
                     method: 'GET',
-                    table: v.table,
+                    apiName: v.apiName,
                     propName: null,
                     propValue: null,
                     payload: null,
@@ -50,7 +50,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
         //GET props
         each(v.props, (vv, col) => {
             r = {
-                path: basePath + v.table + `/${col}/{${col}}`,
+                path: basePath + v.apiName + `/${col}/{${col}}`,
                 method: 'GET',
                 handler: function (req, res) {
                     let pm = genPm()
@@ -59,7 +59,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
                     proc({
                         method: 'GET',
-                        table: v.table,
+                        apiName: v.apiName,
                         propName: col,
                         propValue: p[col],
                         payload: null,
@@ -79,7 +79,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
             //POST, PUT all
             r = {
-                path: basePath + v.table,
+                path: basePath + v.apiName,
                 method,
                 handler: function (req, res) {
                     let pm = genPm()
@@ -88,7 +88,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
                     proc({
                         method,
-                        table: v.table,
+                        apiName: v.apiName,
                         propName: null,
                         propValue: null,
                         payload: data,
@@ -105,7 +105,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
             //POST, PUT props
             each(v.props, (vv, col) => {
                 r = {
-                    path: basePath + v.table + `/${col}/{${col}}`,
+                    path: basePath + v.apiName + `/${col}/{${col}}`,
                     method,
                     handler: function (req, res) {
                         let pm = genPm()
@@ -115,7 +115,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
                         proc({
                             method,
-                            table: v.table,
+                            apiName: v.apiName,
                             propName: col,
                             propValue: p[col],
                             payload: data,
@@ -137,7 +137,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
         //DELETE props
         each(v.props, (vv, col) => {
             r = {
-                path: basePath + v.table + `/${col}/{${col}}`,
+                path: basePath + v.apiName + `/${col}/{${col}}`,
                 method: 'DELETE',
                 handler: function (req, res) {
                     let pm = genPm()
@@ -146,7 +146,7 @@ function routesToAPI(apis = [], routes = [], apiParent = '', proc = () => {}) {
 
                     proc({
                         method: 'DELETE',
-                        table: v.table,
+                        apiName: v.apiName,
                         propName: col,
                         propValue: p[col],
                         payload: null,
