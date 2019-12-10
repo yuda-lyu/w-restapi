@@ -17,6 +17,7 @@ import routesToAPI from './routesToAPI.mjs'
  * @param {String} [opt.apiParent='api'] 輸入網址api所在名稱字串，預設'api'
  * @param {Object} [opt.funcs={}] 輸入伺服器端供使用者端呼叫之函數物件，各key為函數名稱，對應value為函數本體。各函數之輸入需為單一物件，而各函數回傳皆為Promise，可通過resolve與reject回傳結果，預設{}
  * @param {Array} [opt.routes=[]] 輸入伺服器額外掛載routes陣列，預設[]
+ * @param {String} [opt.token=''] 輸入呼叫api時的預設金鑰字串，預設''
  * @param {function} [opt.proc=null] 輸入處理api函數，預設null
  */
 function WRestapi(opt) {
@@ -60,7 +61,7 @@ function WRestapi(opt) {
     apis = routesToAPI(apis, opt.routes, opt.apiParent, opt.proc)
 
     //routesToSwagger
-    let sw = routesToSwagger(`localhost:${opt.port}`, opt.apiParent, opt.routes)
+    let sw = routesToSwagger(`localhost:${opt.port}`, opt.apiParent, opt.routes, opt.token)
     fs.writeFileSync(`./${opt.docFolder}/swagger.json`, JSON.stringify(sw, null, 4), 'utf8')
     //console.log(sw)
 

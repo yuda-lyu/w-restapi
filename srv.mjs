@@ -46,5 +46,5 @@ function proc({ method, apiName, propName, propValue, payload, pm, req, res }) {
 
 }
 
-new WRestapi({ routes, proc })
+new WRestapi({ routes, proc, token: 'defToken' })
 

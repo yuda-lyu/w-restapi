@@ -13,6 +13,12 @@ let itemGet = `
     'description': 'select {tag} by {col}',
     'parameters': [
         {
+            'in': 'query',
+            'name': 'token',
+            'type': 'string',
+            'default': '{token}'
+        },
+        {
             'name': '{col}',
             'in': 'path',
             'description': '{colDescription}',
@@ -43,6 +49,12 @@ let itemPost = `
         'application/json',
     ],
     'parameters': [
+        {
+            'in': 'query',
+            'name': 'token',
+            'type': 'string',
+            'default': '{token}'
+        },
         {
             'name': '{col}',
             'in': 'path',
@@ -85,6 +97,12 @@ let itemDelete = `
     'description': 'delete {tag} by {col}',
     'parameters': [
         {
+            'in': 'query',
+            'name': 'token',
+            'type': 'string',
+            'default': '{token}'
+        },
+        {
             'name': '{col}',
             'in': 'path',
             'description': '{colDescription}',
@@ -111,6 +129,14 @@ let itemsGet = `
     ],
     'summary': 'select all {tag}(s)',
     'description': 'select all {tag}(s)',
+    'parameters': [
+        {
+            'in': 'query',
+            'name': 'token',
+            'type': 'string',
+            'default': '{token}'
+        }
+    ],
     'security': [],
     'responses': {
         '200': {
@@ -135,6 +161,12 @@ let itemsPost = `
         'application/json',
     ],
     'parameters': [
+        {
+            'in': 'query',
+            'name': 'token',
+            'type': 'string',
+            'default': '{token}'
+        },
         {
             'name': 'body',
             'in': 'body',
@@ -249,12 +281,13 @@ function genPathsFromRoutes(routes) {
 }
 
 
-function genSWJson(host, basePath, routes) {
+function genSWJson(host, basePath, routes, token) {
     let paths = genPathsFromRoutes(routes)
     let c = swJSON
     c = replace(c, `{host}`, host)
     c = replace(c, `{basePath}`, basePath)
     c = replace(c, `{paths}`, paths)
+    c = replace(c, `{token}`, token)
     return JSON5.parse(c)
 }
 
@@ -267,8 +300,8 @@ function genSWJson(host, basePath, routes) {
  * @param {Array} [routes=[]] 輸入Routes陣列，每個物件皆需要有表名字串'apiName'、主鍵名字串'pk'、物件所屬欄位物件'props'，預設[]
  * @returns {Object} 回傳Swagger的設定物件
  */
-function routesToSwagger(host = 'localhost:8080', apiParent = 'api', routes = []) {
-    return genSWJson(host, apiParent, routes)
+function routesToSwagger(host = 'localhost:8080', apiParent = 'api', routes = [], token = '') {
+    return genSWJson(host, apiParent, routes, token)
 }
 
 

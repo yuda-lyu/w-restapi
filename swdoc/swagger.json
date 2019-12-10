@@ -18,6 +18,14 @@
                 ],
                 "summary": "select all pet(s)",
                 "description": "select all pet(s)",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    }
+                ],
                 "security": [],
                 "responses": {
                     "200": {
@@ -38,6 +46,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -82,6 +96,12 @@
                 ],
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "body",
                         "in": "body",
                         "description": "pet object or array of objects in JSON string format",
@@ -124,6 +144,12 @@
                 "description": "select pet by id",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "id",
                         "in": "path",
                         "description": "id description",
@@ -150,6 +176,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -200,6 +232,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -248,6 +286,12 @@
                 "description": "delete pet by id",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "id",
                         "in": "path",
                         "description": "id description",
@@ -273,6 +317,12 @@
                 "summary": "select pet by petName",
                 "description": "select pet by petName",
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petName",
                         "in": "path",
@@ -300,6 +350,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petName",
                         "in": "path",
@@ -350,6 +406,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petName",
                         "in": "path",
@@ -398,6 +460,12 @@
                 "description": "delete pet by petName",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "petName",
                         "in": "path",
                         "description": "petName description",
@@ -423,6 +491,12 @@
                 "summary": "select pet by petAge",
                 "description": "select pet by petAge",
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petAge",
                         "in": "path",
@@ -450,6 +524,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petAge",
                         "in": "path",
@@ -500,6 +580,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "petAge",
                         "in": "path",
@@ -548,6 +634,12 @@
                 "description": "delete pet by petAge",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "petAge",
                         "in": "path",
                         "description": "petAge description",
@@ -572,6 +664,14 @@
                 ],
                 "summary": "select all store(s)",
                 "description": "select all store(s)",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    }
+                ],
                 "security": [],
                 "responses": {
                     "200": {
@@ -592,6 +692,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -636,6 +742,12 @@
                 ],
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "body",
                         "in": "body",
                         "description": "store object or array of objects in JSON string format",
@@ -678,6 +790,12 @@
                 "description": "select store by id",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "id",
                         "in": "path",
                         "description": "id description",
@@ -704,6 +822,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -754,6 +878,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -802,6 +932,12 @@
                 "description": "delete store by id",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "id",
                         "in": "path",
                         "description": "id description",
@@ -827,6 +963,12 @@
                 "summary": "select store by prodName",
                 "description": "select store by prodName",
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "prodName",
                         "in": "path",
@@ -854,6 +996,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "prodName",
                         "in": "path",
@@ -904,6 +1052,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "prodName",
                         "in": "path",
@@ -952,6 +1106,12 @@
                 "description": "delete store by prodName",
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "prodName",
                         "in": "path",
                         "description": "prodName description",
@@ -977,6 +1137,12 @@
                 "summary": "select store by price",
                 "description": "select store by price",
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "price",
                         "in": "path",
@@ -1004,6 +1170,12 @@
                     "application/json"
                 ],
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "price",
                         "in": "path",
@@ -1055,6 +1227,12 @@
                 ],
                 "parameters": [
                     {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
+                    {
                         "name": "price",
                         "in": "path",
                         "description": "price description",
@@ -1101,6 +1279,12 @@
                 "summary": "delete store by price",
                 "description": "delete store by price",
                 "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "type": "string",
+                        "default": "defToken"
+                    },
                     {
                         "name": "price",
                         "in": "path",
