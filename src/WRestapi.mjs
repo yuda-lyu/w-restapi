@@ -58,7 +58,7 @@ function WRestapi(opt) {
     opt.routes = sortBy(opt.routes, 'apiName')
 
     //routesToAPI
-    apis = routesToAPI(apis, opt.routes, opt.apiParent, opt.proc)
+    apis = [...apis, ...routesToAPI(opt.routes, opt.apiParent, opt.proc)]
 
     //routesToSwagger
     let sw = routesToSwagger(`localhost:${opt.port}`, opt.apiParent, opt.routes, opt.token)
