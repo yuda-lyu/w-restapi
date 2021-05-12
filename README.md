@@ -14,7 +14,7 @@ To view documentation or get support, visit [docs](https://yuda-lyu.github.io/w-
 
 ## Installation
 ### Using npm(ES6 module):
-> **Note:** `w-restapi` depends on `@hapi/hapi` and `@hapi/inert`.
+> **Note:** `w-restapi` is mainly dependent on `@hapi/hapi` and `@hapi/inert`.
 
 ```alias
 npm i w-restapi

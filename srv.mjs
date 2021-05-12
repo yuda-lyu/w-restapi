@@ -48,3 +48,4 @@ function proc({ method, apiName, propName, propValue, payload, pm, req, res }) {
 
 new WRestapi({ routes, proc, token: 'defToken' })
 
+//node --experimental-modules --es-module-specifier-resolution=node srv.mjs
