@@ -1,17 +1,17 @@
 {
   "name": "w-restapi",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A REST API server with swagger.",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {
-    "@hapi/hapi": "^20.1.3",
-    "@hapi/inert": "^6.0.3",
+    "@hapi/hapi": "^20.2.0",
+    "@hapi/inert": "^6.0.4",
     "lodash": "^4.17.21",
-    "wsemi": "^1.5.77"
+    "wsemi": "^1.6.19"
   },
   "devDependencies": {
     "json5": "^2.2.0",
-    "w-package-tools": "^1.0.54"
+    "w-package-tools": "^1.0.59"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
