@@ -3,7 +3,6 @@ A REST API server with swagger.
 
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
 [![npm version](http://img.shields.io/npm/v/w-restapi.svg?style=flat)](https://npmjs.org/package/w-restapi) 
-[![Build Status](https://travis-ci.org/yuda-lyu/w-restapi.svg?branch=master)](https://travis-ci.org/yuda-lyu/w-restapi) 
 [![license](https://img.shields.io/npm/l/w-restapi.svg?style=flat)](https://npmjs.org/package/w-restapi) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-restapi/master/dist/w-restapi.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-restapi)
 [![npm download](https://img.shields.io/npm/dt/w-restapi.svg)](https://npmjs.org/package/w-restapi) 
