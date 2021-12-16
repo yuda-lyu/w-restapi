@@ -1,13 +1,13 @@
 {
   "name": "w-restapi",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A REST API server with swagger.",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {
-    "@hapi/hapi": "^20.2.0",
+    "@hapi/hapi": "^20.2.1",
     "@hapi/inert": "^6.0.4",
     "lodash": "^4.17.21",
-    "wsemi": "^1.6.19"
+    "wsemi": "^1.6.34"
   },
   "devDependencies": {
     "json5": "^2.2.0",
