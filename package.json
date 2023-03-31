@@ -1,16 +1,16 @@
 {
   "name": "w-restapi",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {
-    "@hapi/hapi": "^21.2.0",
-    "@hapi/inert": "^7.0.0",
+    "@hapi/hapi": "^21.3.1",
+    "@hapi/inert": "^7.1.0",
     "lodash": "^4.17.21",
-    "wsemi": "^1.6.87"
+    "wsemi": "^1.7.2"
   },
   "devDependencies": {
     "json5": "^2.2.3",
-    "w-package-tools": "^1.0.66"
+    "w-package-tools": "^1.0.69"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",

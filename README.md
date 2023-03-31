@@ -70,4 +70,6 @@ function proc({ method, apiName, propName, propValue, payload, pm, req, res }) {
 }
 
 new WRestapi({ routes, proc })
+
+//view swagger: http://localhost:8080/swdoc/index.html
 ```

@@ -48,4 +48,6 @@ function proc({ method, apiName, propName, propValue, payload, pm, req, res }) {
 
 new WRestapi({ routes, proc, token: 'defToken' })
 
+//瀏覽swagger: http://localhost:8080/swdoc/index.html
+
 //node --experimental-modules --es-module-specifier-resolution=node srv.mjs

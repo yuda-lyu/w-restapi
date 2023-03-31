@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="styles/prettify.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
     <script src="scripts/nav.js" defer></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -27,7 +28,9 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#routesToAPI">routesToAPI</a></li><li><a href="global.html#routesToSwagger">routesToSwagger</a></li><li><a href="global.html#WRestapi">WRestapi</a></li></ul>
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#WRestapi">WRestapi</a></li><li><a href="global.html#routesToAPI">routesToAPI</a></li><li><a href="global.html#routesToSwagger">routesToSwagger</a></li></ul>
+    
 </nav>
 
 <div id="main">
@@ -46,6 +49,8 @@
     
         <h2>
         
+            
+        
         </h2>
         
     
@@ -58,6 +63,7 @@
             
 
 <dl class="details">
+    
 
     
 
@@ -124,518 +130,6 @@
 
     
 
-    <h4 class="name" id="routesToAPI"><span class="type-signature"></span>routesToAPI<span class="signature">(routes<span class="signature-attributes">opt</span>, apiParent<span class="signature-attributes">opt</span>, proc<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="routesToAPI.mjs.html">routesToAPI.mjs</a>, <a href="routesToAPI.mjs.html#line14">line 14</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    <p>由Routes陣列資料轉hapi的API資料陣列</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>routes</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>[]</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入需自動產製的routes資料陣列，每個元素需有'apiName'欄位，其值給予表名字串，'props'欄位，其值給予欄位物件，預設[]</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apiParent</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>'api'</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入api上層路徑字串，預設'api'</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>proc</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>() => {}</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入各api處理函數，prop會傳入method(API method),apiName(表名),propName(指定欄位名稱),propValue(指定欄位值),payload(post時數據),req(hapi的req),res(hapi的res),pm(回傳用Promise)，處理完畢後成功時呼叫pm.resolve回傳，失敗時呼叫pm.reject回傳，預設()=&gt;{}</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>回傳hapi的API資料陣列</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="routesToSwagger"><span class="type-signature"></span>routesToSwagger<span class="signature">(host<span class="signature-attributes">opt</span>, apiParent<span class="signature-attributes">opt</span>, routes<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="routesToSwagger.mjs.html">routesToSwagger.mjs</a>, <a href="routesToSwagger.mjs.html#line303">line 303</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    <p>由Routes陣列資料轉Swagger的設定物件</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>host</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>'localhost:8080'</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入伺服器所在host字串，預設'localhost:8080'</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apiParent</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>'api'</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入api上層路徑字串，預設'api'</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>routes</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>[]</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>輸入Routes陣列，每個物件皆需要有表名字串'apiName'、主鍵名字串'pk'、物件所屬欄位物件'props'，預設[]</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>回傳Swagger的設定物件</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
     <h4 class="name" id="WRestapi"><span class="type-signature"></span>WRestapi<span class="signature">(opt)</span><span class="type-signature"></span></h4>
 
     
@@ -644,6 +138,10 @@
 
 
 <dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>建立http API伺服器</p></li></ul></dd>
+    
 
     
     <dt class="tag-source">Source:</dt>
@@ -687,9 +185,6 @@
 
 
 
-<div class="description usertext">
-    <p>建立http API伺服器</p>
-</div>
 
 
 
@@ -698,10 +193,7 @@
 
 
 
-
-
-
-    <h5>Parameters:</h5>
+    <h5 class="h5-parameters">Parameters:</h5>
     
 
 <table class="params">
@@ -733,6 +225,7 @@
             
                 
 <span class="param-type">Object</span>
+
 
 
             
@@ -781,6 +274,7 @@
 <span class="param-type">Object</span>
 
 
+
             
             </td>
 
@@ -818,6 +312,7 @@
             
                 
 <span class="param-type">Integer</span>
+
 
 
             
@@ -859,6 +354,7 @@
 <span class="param-type">String</span>
 
 
+
             
             </td>
 
@@ -896,6 +392,7 @@
             
                 
 <span class="param-type">String</span>
+
 
 
             
@@ -937,6 +434,7 @@
 <span class="param-type">Object</span>
 
 
+
             
             </td>
 
@@ -974,6 +472,7 @@
             
                 
 <span class="param-type">Array</span>
+
 
 
             
@@ -1015,6 +514,7 @@
 <span class="param-type">String</span>
 
 
+
             
             </td>
 
@@ -1052,6 +552,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1110,6 +611,522 @@
 
 
         
+            
+
+    
+
+    <h4 class="name" id="routesToAPI"><span class="type-signature"></span>routesToAPI<span class="signature">(routes<span class="signature-attributes">opt</span>, apiParent<span class="signature-attributes">opt</span>, proc<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>由Routes陣列資料轉hapi的API資料陣列</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routesToAPI.mjs.html">routesToAPI.mjs</a>, <a href="routesToAPI.mjs.html#line14">line 14</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>routes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>[]</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入需自動產製的routes資料陣列，每個元素需有'apiName'欄位，其值給予表名字串，'props'欄位，其值給予欄位物件，預設[]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apiParent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>'api'</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入api上層路徑字串，預設'api'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>proc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>() => {}</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入各api處理函數，prop會傳入method(API method),apiName(表名),propName(指定欄位名稱),propValue(指定欄位值),payload(post時數據),req(hapi的req),res(hapi的res),pm(回傳用Promise)，處理完畢後成功時呼叫pm.resolve回傳，失敗時呼叫pm.reject回傳，預設()=&gt;{}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>回傳hapi的API資料陣列</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="routesToSwagger"><span class="type-signature"></span>routesToSwagger<span class="signature">(host<span class="signature-attributes">opt</span>, apiParent<span class="signature-attributes">opt</span>, routes<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>由Routes陣列資料轉Swagger的設定物件</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="routesToSwagger.mjs.html">routesToSwagger.mjs</a>, <a href="routesToSwagger.mjs.html#line303">line 303</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>'localhost:8080'</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入伺服器所在host字串，預設'localhost:8080'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apiParent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>'api'</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入api上層路徑字串，預設'api'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>routes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>[]</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>輸入Routes陣列，每個物件皆需要有表名字串'apiName'、主鍵名字串'pk'、物件所屬欄位物件'props'，預設[]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>回傳Swagger的設定物件</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
     
 
     
@@ -1129,7 +1146,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Sat Jan 21 2023 13:12:15 GMT+0800 (台北標準時間) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Fri Mar 31 2023 15:23:00 GMT+0800 (台北標準時間) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
