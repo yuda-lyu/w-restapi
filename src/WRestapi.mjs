@@ -1,7 +1,7 @@
 import fs from 'fs'
 import Hapi from '@hapi/hapi'
 import Inert from '@hapi/inert' //提供靜態檔案
-import sortBy from 'lodash/sortBy'
+import sortBy from 'lodash-es/sortBy'
 import isfun from 'wsemi/src/isfun.mjs'
 import routesToSwagger from './routesToSwagger.mjs'
 import routesToAPI from './routesToAPI.mjs'

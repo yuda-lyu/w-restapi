@@ -6,6 +6,7 @@ A REST API server with swagger.
 [![license](https://img.shields.io/npm/l/w-restapi.svg?style=flat)](https://npmjs.org/package/w-restapi) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-restapi/master/dist/w-restapi.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-restapi)
 [![npm download](https://img.shields.io/npm/dt/w-restapi.svg)](https://npmjs.org/package/w-restapi) 
+[![npm download](https://img.shields.io/npm/dm/w-restapi.svg)](https://npmjs.org/package/w-restapi) 
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-restapi.svg)](https://www.jsdelivr.com/package/npm/w-restapi)
 
 ## Documentation
