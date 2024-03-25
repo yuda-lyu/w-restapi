@@ -1,6 +1,6 @@
 import JSON5 from 'json5'
-import map from 'lodash-es/map'
-import join from 'lodash-es/join'
+import map from 'lodash-es/map.js'
+import join from 'lodash-es/join.js'
 import replace from 'wsemi/src/replace.mjs'
 
 

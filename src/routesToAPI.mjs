@@ -1,4 +1,4 @@
-import each from 'lodash-es/each'
+import each from 'lodash-es/each.js'
 import genPm from 'wsemi/src/genPm.mjs'
 import isstr from 'wsemi/src/isstr.mjs'
 
