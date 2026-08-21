@@ -1,15 +1,15 @@
 {
   "name": "w-restapi",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {
     "@hapi/hapi": "^21.3.7",
     "@hapi/inert": "^7.1.0",
-    "wsemi": "^1.8.78"
+    "wsemi": "^1.8.79"
   },
   "devDependencies": {
     "json5": "^2.2.3",
-    "w-package-tools": "^1.1.14"
+    "w-package-tools": "^1.1.15"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000",
