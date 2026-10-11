@@ -1,11 +1,11 @@
 {
   "name": "w-restapi",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "main": "dist/w-restapi.umd.js",
   "dependencies": {
     "@hapi/hapi": "^21.3.7",
     "@hapi/inert": "^7.1.0",
-    "wsemi": "^1.9.11"
+    "wsemi": "^1.9.12"
   },
   "devDependencies": {
     "json5": "^2.2.3",
